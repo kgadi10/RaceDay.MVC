@@ -1,0 +1,12 @@
+@using System.Text.Json
+
+<h2>Available Events</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+<pre>@ViewBag.Data</pre>
+
+<p>Select an event and use its enrolment option to enter.</p>

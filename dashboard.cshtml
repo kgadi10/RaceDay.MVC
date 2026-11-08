@@ -1,0 +1,22 @@
+<h2>Participant Dashboard</h2>
+
+<p>Welcome to your RaceDay participant dashboard.</p>
+
+<div class="list-group">
+    <a asp-action="Events" class="list-group-item">
+        Browse Events
+    </a>
+
+    <a asp-action="Enrolments" class="list-group-item">
+        My Enrolments
+    </a>
+
+    <a asp-action="Results" class="list-group-item">
+        My Results
+    </a>
+
+    <a asp-controller="Account" asp-action="Logout"
+       class="list-group-item text-danger">
+        Logout
+    </a>
+</div>

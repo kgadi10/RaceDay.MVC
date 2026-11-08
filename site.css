@@ -1,0 +1,44 @@
+﻿body {
+    background-color: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263238;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+h1, h2, h3 {
+    color: #123b5d;
+    font-weight: bold;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+}
+
+.btn-primary {
+    background-color: #087e8b;
+    border-color: #087e8b;
+}
+
+    .btn-primary:hover {
+        background-color: #065c66;
+    }
+
+.list-group-item {
+    padding: 15px;
+}
+
+pre {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}

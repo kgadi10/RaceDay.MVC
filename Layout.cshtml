@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RaceDay</title>
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home"
+                   asp-action="Index">RaceDay</a>
+
+                <div class="navbar-nav">
+                    @if (Context.Session.GetString("UserRole") == "Participant")
+                    {
+                        <a class="nav-link"
+                           asp-controller="Participant"
+                           asp-action="Dashboard">Dashboard</a>
+
+                        <a class="nav-link"
+                           asp-controller="Participant"
+                           asp-action="Events">Events</a>
+
+                        <a class="nav-link"
+                           asp-controller="Participant"
+                           asp-action="Enrolments">My Enrolments</a>
+
+                        <a class="nav-link"
+                           asp-controller="Participant"
+                           asp-action="Results">My Results</a>
+                    }
+                    else if (Context.Session.GetString("UserRole") == "Organiser")
+                    {
+                        <a class="nav-link"
+                           asp-controller="Organiser"
+                           asp-action="Dashboard">Dashboard</a>
+
+                        <a class="nav-link"
+                           asp-controller="Organiser"
+                           asp-action="Events">Manage Events</a>
+
+                        <a class="nav-link"
+                           asp-controller="Organiser"
+                           asp-action="CreateEvent">Create Event</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link"
+                           asp-controller="Home"
+                           asp-action="Index">Home</a>
+
+                        <a class="nav-link"
+                           asp-controller="Account"
+                           asp-action="Login">Login</a>
+
+                        <a class="nav-link"
+                           asp-controller="Account"
+                           asp-action="Register">Register</a>
+                    }
+
+                    @if (!string.IsNullOrEmpty(
+                        Context.Session.GetString("UserEmail")))
+                    {
+                        <a class="nav-link text-warning"
+                           asp-controller="Account"
+                           asp-action="Logout">Logout</a>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        @RenderBody()
+    </main>
+
+    <footer class="container mt-5 mb-3 text-muted">
+        <hr />
+        <p>&copy; @DateTime.Now.Year RaceDay Event Management System</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

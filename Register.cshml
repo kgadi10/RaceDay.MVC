@@ -1,0 +1,34 @@
+@model RaceDay.MVC.Models.RegisterViewModel
+
+<h2>Create a RaceDay Account</h2>
+
+<form asp-action="Register" method="post">
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="FullName">Full name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Role">Account type</label>
+        <select asp-for="Role" class="form-select">
+            <option value="Participant">Participant</option>
+            <option value="Organiser">Organiser</option>
+        </select>
+    </div>
+
+    <button class="btn btn-primary">Register</button>
+</form>

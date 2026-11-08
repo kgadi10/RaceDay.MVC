@@ -1,0 +1,22 @@
+<h2>Enter Event</h2>
+
+<p>Event ID: @ViewBag.EventId</p>
+
+<p>Available categories returned by the API:</p>
+
+<pre>@ViewBag.Categories</pre>
+
+<form method="post" asp-action="Enrol">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" name="eventId"
+           value="@ViewBag.EventId" />
+
+    <div class="mb-3">
+        <label>Category ID</label>
+        <input type="number" name="categoryId"
+               class="form-control" required />
+    </div>
+
+    <button class="btn btn-primary">Submit Enrolment</button>
+</form>
