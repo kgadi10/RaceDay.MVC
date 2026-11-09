@@ -16,5 +16,6 @@ Add event update functionality
 Implement API cookie session handling
 Add MVC validation
 Update GitHub Actions workflow
+Update README and submission documentation
 
 Add participant dashboard
