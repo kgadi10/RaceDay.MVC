@@ -5,7 +5,11 @@ Add account controller
 Add event listing page
 Add event enrolment page
 Add participant results page
+Add organiser result capture
 
+
+
+Add navigation and layout
 Add event creation page
 Add organiser dashboard
 
