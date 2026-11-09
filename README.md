@@ -15,6 +15,6 @@ Add organiser dashboard
 Add event update functionality
 Implement API cookie session handling
 Add MVC validation
-
+Update GitHub Actions workflow
 
 Add participant dashboard
