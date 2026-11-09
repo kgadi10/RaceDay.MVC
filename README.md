@@ -7,7 +7,7 @@ Add event enrolment page
 Add participant results page
 Add organiser result capture
 Add responsive styling
-
+Add profile pages
 
 Add navigation and layout
 Add event creation page
