@@ -8,7 +8,7 @@ Add participant results page
 Add organiser result capture
 Add responsive styling
 Add profile pages
-
+Add category management
 Add navigation and layout
 Add event creation page
 Add organiser dashboard
