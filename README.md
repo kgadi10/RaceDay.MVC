@@ -12,7 +12,7 @@ Add category management
 Add navigation and layout
 Add event creation page
 Add organiser dashboard
-
+Add event update functionality
 Implement API cookie session handling
 
 
