@@ -3,7 +3,7 @@ CREATE RaceDay MVC project
 Configure API HttpClient
 Add account controller
 Add event listing page
-
+Add event enrolment page
 
 
 Add event creation page
